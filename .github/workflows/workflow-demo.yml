@@ -1,0 +1,16 @@
+name: My first work flow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  helloworld:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "print message"
+        run: echo "Hi deepak"
