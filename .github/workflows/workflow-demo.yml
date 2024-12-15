@@ -14,3 +14,8 @@ jobs:
     steps:
       - name: "print message"
         run: echo "Hi deepak"
+  helloworld2:
+    runs-on: ubuntu-latest2
+    steps:
+      - name: "second message"
+        run: echo "bye deepak"
