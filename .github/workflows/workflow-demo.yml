@@ -14,7 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "print message"
-        run: pwd
+        run: |
+          pwd
+          ls -a
+          echo "Hello world"
   helloworld2:
     runs-on: ubuntu-latest
     steps:
