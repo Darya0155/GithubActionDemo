@@ -9,17 +9,19 @@ on:
       - main
 
 jobs:
-  helloworld:
-    needs: helloworld2
+  build:
+#    needs: helloworld2
     runs-on: ubuntu-latest
     steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
       - name: "print message"
         run: |
           pwd
           ls -a
           echo "Hello world"
-  helloworld2:
-    runs-on: ubuntu-latest
-    steps:
-      - name: "second message"
-        run: echo "bye deepak"
+#  helloworld2:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: "second message"
+#        run: echo "bye deepak"
