@@ -19,7 +19,7 @@ jobs:
         run: |
           pwd
           ls -a
-          echo "Hello world"
+          echo $GITHUB_WORKSPACE
 #  helloworld2:
 #    runs-on: ubuntu-latest
 #    steps:
