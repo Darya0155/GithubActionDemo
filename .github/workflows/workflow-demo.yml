@@ -28,7 +28,7 @@ jobs:
         run: |
           pwd
           ls -a
-          echo $GITHUB_WORKSPACE
+          echo "workdir $path"
           echo "today is $DAY_OF_WEEK"
           echo "testvar ${{env.testvar}}"
 #  helloworld2:
