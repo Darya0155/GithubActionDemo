@@ -9,11 +9,17 @@ on:
       - main
   workflow_dispatch:
 
+env:
+  DAY_OF_WEEK: MONDAY
+  testvar: value-1
 
 jobs:
   build:
+    name: "print variable"
 #    needs: helloworld2
     runs-on: ubuntu-latest
+    env:
+      path: $GITHUB_WORKSPACE
     steps:
 #      This action checks-out your repository under $GITHUB_WORKSPACE, so your workflow can access it.
       - name: Check out repository code
@@ -23,6 +29,8 @@ jobs:
           pwd
           ls -a
           echo $GITHUB_WORKSPACE
+          echo "today is $DAY_OF_WEEK"
+          echo "testvar ${{env.testvar}}"
 #  helloworld2:
 #    runs-on: ubuntu-latest
 #    steps:
