@@ -7,15 +7,18 @@ on:
   pull_request:
     branches:
       - main
+  workflow_dispatch:
+
 
 jobs:
   build:
 #    needs: helloworld2
     runs-on: ubuntu-latest
     steps:
+#      This action checks-out your repository under $GITHUB_WORKSPACE, so your workflow can access it.
       - name: Check out repository code
         uses: actions/checkout@v4
-      - name: "print message"
+      - name: "Build statring "
         run: |
           pwd
           ls -a
