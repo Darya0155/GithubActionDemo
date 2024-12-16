@@ -30,7 +30,10 @@ jobs:
           ls -a
           echo "workdir ${{env.path}}"
           echo "today is $DAY_OF_WEEK"
-          echo "testvar ${{env.testvar}}"
+          echo "a=testvar ${{env.testvar}}" >> $GITHUB_ENV
+      - name: "build end"
+        run: |
+          echo "${{env.a}}"
 #  helloworld2:
 #    runs-on: ubuntu-latest
 #    steps:
