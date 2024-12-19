@@ -34,6 +34,7 @@ jobs:
       - name: "build end"
         run: |
           echo "${{env.a}}"
+          echo password ${{secrets.TEST_SECRET}}
 #  helloworld2:
 #    runs-on: ubuntu-latest
 #    steps:
